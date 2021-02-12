@@ -1,10 +1,13 @@
-const express = require('express');
-const app = express();
+const express = require("express")
+const loginController = require("./controllers/login")
+const registerController = require("./controllers/register")
 
-app.get('/', (req, res) => {
-  res.send('Hello Node.js!');
-});
+const app = express()
+app.set("view engine", "ejs")
+app.use(express.static("style"));
+app.get("/", loginController.rootAccessControl)
+app.get("/register", registerController.rootAccessControl)
 
-app.listen(3000, () => {
-    console.log("My app listening on port 3000!");
-});
+app.listen(3000, () =>{
+   console.log("Start express server by specifying port 3000.")
+})
