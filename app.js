@@ -1,5 +1,4 @@
 const express = require('express');
-const loginController = require('./controllers/login');
 const bodyParser = require('body-parser');
 const { check, validationResult } = require('express-validator');
 
@@ -10,8 +9,9 @@ const urlencodedParser = bodyParser.urlencoded({ extended: false });
 
 app.use(express.static('style'));
 
-app.get('/', loginController.rootAccessControl);
-
+app.get('/', (req, res) => {
+  res.render('index');
+});
 app.get('/register', (req, res) => {
   res.render('register');
 });
