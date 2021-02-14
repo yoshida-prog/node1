@@ -14,35 +14,48 @@
   <header>
     <div class="headerWrapper">
       <div class="headerTitle">
-        <h3><%= title %></h3>
+        <h3>Laravel</h3>
       </div>
       <nav>
-        <a href="<%= loginLink.href %>"><%= loginLink.text %></a>
-        <a href="<%= registerLink.href %>"><%= registerLink.text %></a>
+        <a href="/">Login</a>
+        <a href="/register">Register</a>
       </nav>
     </div>
   </header>
+
+  <% if(typeof errors_array != 'undefined') { %>
+    <div class="registerErrorContainer">
+      <ul>
+        <% for (let n in errors_array) { %>
+        <li>
+          <%= errors_array[n].msg %>
+        </li>
+        <% } %>
+      </ul>
+    </div>
+  <% } %>
+
   <div class="loginContainer">
     <div class="ContainerTitle">
-      <span><%= loginLink.text %></span>
+      <span>Register</span>
     </div>
     <div class="formContainer">
-      <form>
+      <form action="/register" method="POST">
         <div class="nameForm">
-          <span><%= form.name %></span>
-          <input type="text">
+          <span>Name</span>
+          <input type="text" name="username" value="<% if(typeof errors_array != 'undefined') { %><%= username %><% } %>">
         </div>
         <div class="emailForm">
-          <span><%= form.email %></span>
-          <input type="text">
+          <span>E-mail Address</span>
+          <input type="email" name="email" value="<% if(typeof errors_array != 'undefined') { %><%= email %><% } %>">
         </div>
         <div class="passwordForm">
-          <span><%= form.password %></span>
-          <input type="password">
+          <span>Password</span>
+          <input type="password" name="password">
         </div>
         <div class="confirmForm">
-          <span><%= form.confirm %></span>
-          <input type="password">
+          <span>Confirm Password</span>
+          <input type="password" name="confirmPassword">
         </div>
         <div class="loginBtnForm">
           <button class="loginBtn">Register</button>
