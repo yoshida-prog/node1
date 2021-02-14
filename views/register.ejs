@@ -1,50 +1,55 @@
 <!DOCTYPE html>
 <html lang="ja">
-   <head>
-     <meta charset="utf-8">
-     <link rel="stylesheet" href="style.css">
-     <script>console.log("スタイル適用完了。chromeで読み込み時にtransitionが発生しないようにする。");</script>
-     <title>ログイン画面</title>
-   </head>
-   <body>
-     <header>
-       <div class="headerWrapper">
-         <div class="headerTitle">
-           <h3><%= title %></h3>
-         </div>
-         <nav>
-           <a href="<%= loginLink.href %>"><%= loginLink.text %></a>
-           <a href="<%= registerLink.href %>"><%= registerLink.text %></a>
-         </nav>
-       </div>
-     </header>
-     <div class="loginContainer">
-       <div class="ContainerTitle">
-         <span><%= loginLink.text %></span>
-       </div>
-       <div class="formContainer">
-         <form>
-           <div class="nameForm">
-             <span><%= form.name %></span>
-             <input type="text">
-           </div>
-           <div class="emailForm">
-             <span><%= form.email %></span>
-             <input type="text">
-           </div>
-           <div class="passwordForm">
-             <span><%= form.password %></span>
-             <input type="password">
-           </div>
-           <div class="confirmForm">
-             <span><%= form.confirm %></span>
-             <input type="password">
-           </div>
-           <div class="loginBtnForm">
-             <button class="loginBtn">Register</button>
-           </div>
-         </form>
-       </div>
-     </div>
-   </body>
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="style.css">
+  <script>
+    console.log("スタイル適用完了。chromeで読み込み時にtransitionが発生しないようにする。");
+  </script>
+  <title>新規登録画面</title>
+</head>
+
+<body>
+  <header>
+    <div class="headerWrapper">
+      <div class="headerTitle">
+        <h3><%= title %></h3>
+      </div>
+      <nav>
+        <a href="<%= loginLink.href %>"><%= loginLink.text %></a>
+        <a href="<%= registerLink.href %>"><%= registerLink.text %></a>
+      </nav>
+    </div>
+  </header>
+  <div class="loginContainer">
+    <div class="ContainerTitle">
+      <span><%= loginLink.text %></span>
+    </div>
+    <div class="formContainer">
+      <form>
+        <div class="nameForm">
+          <span><%= form.name %></span>
+          <input type="text">
+        </div>
+        <div class="emailForm">
+          <span><%= form.email %></span>
+          <input type="text">
+        </div>
+        <div class="passwordForm">
+          <span><%= form.password %></span>
+          <input type="password">
+        </div>
+        <div class="confirmForm">
+          <span><%= form.confirm %></span>
+          <input type="password">
+        </div>
+        <div class="loginBtnForm">
+          <button class="loginBtn">Register</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</body>
+
 </html>
