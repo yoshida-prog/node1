@@ -14,13 +14,13 @@ nav {
   justify-content: space-around;
 }
 
-nav > a {
+nav>a {
   text-decoration: none;
   color: #888;
   font-size: 18px;
 }
 
-nav > a:hover {
+nav>a:hover {
   color: #56abff;
 }
 
@@ -79,21 +79,21 @@ input[type="text"], input[type="password"] {
 
 .loginBtn {
   display: inline-block;
-    width: 80px;
-    height: 40px;
-    background-color: #59abff;
-    color: #fafafa;
-    font-size: 18px;
-    border-radius: 8px;
-    border: none;
-    transition: background-color 1s;
+  width: 80px;
+  height: 40px;
+  background-color: #59abff;
+  color: #fafafa;
+  font-size: 18px;
+  border-radius: 8px;
+  border: none;
+  transition: background-color 1s;
 }
 
 .loginBtn:hover {
   background-color: #59d2ff;
 }
 
-.loginBtnForm > a {
+.loginBtnForm>a {
   color: #59abff;
   text-decoration: none;
 }
