@@ -14,31 +14,33 @@
   <header>
     <div class="headerWrapper">
       <div class="headerTitle">
-        <h3><%= title %></h3>
+        <h3>Laravel</h3>
       </div>
       <nav>
-        <a href="<%= loginLink.href %>"><%= loginLink.text %></a>
-        <a href="<%= registerLink.href %>"><%= registerLink.text %></a>
+        <a href="/">Login</a>
+        <a href="/register">Register</a>
       </nav>
     </div>
   </header>
   <div class="loginContainer">
     <div class="ContainerTitle">
-      <span><%= loginLink.text %></span>
+      <span>Login</span>
     </div>
     <div class="formContainer">
       <form>
         <div class="emailForm">
-          <span><%= form.email %></span>
+          <span>E-mail address</span>
           <input type="text">
         </div>
         <div class="passwordForm">
-          <span><%= form.password %></span>
+          <span>Password</span>
           <input type="password">
         </div>
         <div class="checkboxForm">
-          <input type="checkbox" name="remenber" value="remenber">
-          <span>Remenber Me</span>
+          <label>
+            <input type="checkbox" name="remenber" value="remenber">
+            <span>Remenber Me</span>
+          </label>
         </div>
         <div class="loginBtnForm">
           <button class="loginBtn">Login</button>
